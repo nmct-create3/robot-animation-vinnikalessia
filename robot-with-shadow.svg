@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg id="Robot_master" data-name="Robot master" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120">
-  <defs>
+  <title>robot-with-shadow</title>
+  <!-- <defs>
     <style>
       .cls-1 {
         fill: #fff;
@@ -14,8 +15,8 @@
         fill: #6dbedf;
       }
     </style>
-  </defs>
-  <rect class="cls-3" width="100" height="120"/>
+  </defs> -->
+  <!-- <rect class="cls-3" width="100" height="120"/> -->
   <ellipse id="Shadow" class="cls-2" cx="49.88" cy="118" rx="18" ry="2"/>
   <g id="Robot">
     <g id="Torso">

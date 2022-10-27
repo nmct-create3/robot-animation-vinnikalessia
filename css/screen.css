@@ -15,6 +15,12 @@
   --global-html-color: var(--global-color-front);
   --global-html-backgroundColor: var(--global-color-back);
   --global-selection-backgroundColor: var(--global-color-front);
+
+  --tranform-anim: 50% 100%;
+  --anim-duration: .75s;
+  --anim-timing: ease-in-out;
+  --anim-iteration: infinite;
+  --anim-direction: alternate;
 }
 
 /*------------------------------------*\
@@ -28,6 +34,8 @@
 */
 
 html {
+  background-color: var(--global-html-backgroundColor);
+  color: var(--global-html-color);
   font-size: 16px;
   line-height: 1.5;
   font-family: sans-serif;
@@ -133,9 +141,55 @@ body {
 */
 
 .c-robot {
+  max-width: 300px;
+  fill: var(--global-color-front);
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .c-robot__shadow {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  fill: black;
+  opacity: .1;
+}
+
+@keyframes shadowPulse{
+  100%{
+    transform: scale(.75);
+  }
+}
+
+@keyframes robotHover{
+  0%{
+    transform: translateY(2.5%);
+  }
+  100%{
+    transform: translateY(-2.5%);
+  }
+}
+
+#Shadow{
+  animation: shadowPulse;
+  transform-origin: var(--tranform-anim);
+  animation-duration: var(--anim-duration);
+  animation-timing-function: var(--anim-timing);
+  animation-iteration-count: var(--anim-iteration);
+  animation-direction: var(--anim-direction);
+}
+
+#Robot{
+  animation: robotHover;
+  transform-origin: var(--tranform-anim);
+  animation-duration: var(--anim-duration);
+  animation-timing-function: var(--anim-timing);
+  animation-iteration-count: var(--anim-iteration);
+  animation-direction: var(--anim-direction);
 }
 
 
