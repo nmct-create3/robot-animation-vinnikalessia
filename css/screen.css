@@ -140,14 +140,21 @@ body {
     Component: Robot
 */
 
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 2rem;
+}
+
 .c-robot {
   max-width: 300px;
   fill: var(--global-color-front);
   display: flex;
-  margin: auto;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 .c-robot__shadow {
@@ -157,6 +164,23 @@ body {
   max-width: 100%;
   fill: black;
   opacity: .1;
+}
+
+.c-robot--css-anim #Shadow{
+  animation: shadowPulse;
+  transform-origin: var(--tranform-anim);
+  animation-duration: var(--anim-duration);
+  animation-timing-function: var(--anim-timing);
+  animation-iteration-count: var(--anim-iteration);
+  animation-direction: var(--anim-direction);
+}
+
+.c-robot--css-anim #Robot{
+  animation: robotHover;
+  animation-duration: var(--anim-duration);
+  animation-timing-function: var(--anim-timing);
+  animation-iteration-count: var(--anim-iteration);
+  animation-direction: var(--anim-direction);
 }
 
 @keyframes shadowPulse{
@@ -174,28 +198,48 @@ body {
   }
 }
 
-#Shadow{
-  animation: shadowPulse;
-  transform-origin: var(--tranform-anim);
-  animation-duration: var(--anim-duration);
-  animation-timing-function: var(--anim-timing);
-  animation-iteration-count: var(--anim-iteration);
-  animation-direction: var(--anim-direction);
-}
 
-#Robot{
-  animation: robotHover;
-  transform-origin: var(--tranform-anim);
-  animation-duration: var(--anim-duration);
-  animation-timing-function: var(--anim-timing);
-  animation-iteration-count: var(--anim-iteration);
-  animation-direction: var(--anim-direction);
-}
 
 
 /*
     Component: Controls
 */
+
+.c-controls{
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.c-controls__button{
+  display: flex;
+  /* justify-content: center; */
+}
+
+.c-controls__list{
+  display: flex;
+  gap: 2rem;
+}
+.c-controls__button--pause{
+
+}
+
+.c-controls__radio{
+  
+}
+
+.c-controls__button{
+  
+}
+.c-play-icon{
+
+}
+.c-play-icon--play{
+
+}
+.c-play-icon--pause{
+
+}
 
 /*------------------------------------*\
 #UTILITIES
