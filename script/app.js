@@ -1,4 +1,4 @@
-let btnSlow, btnNormal, btnFast, btnPause, btnPlay;
+let btnSlow, btnNormal, btnFast, btnPause, btnPlay, btnLight, lightning;
 
 
 const robot = function(){
@@ -36,6 +36,11 @@ const buttons = function(tl){
     }
 }
 
+const lightningButton = function(){
+  btnLight = document.queryselector('.js-lightning');
+  lightning = document.getElementById(btnLight);
+  btnLight.onclick = () => lightning.beginElement();
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     btnSlow = document.querySelector('.js-slow');
@@ -45,7 +50,10 @@ document.addEventListener('DOMContentLoaded', function () {
     btnPlay = document.querySelector('.js-play');
     btnPause = document.querySelector('.js-pause');
 
+    // btnLight = document.querySelector('.js-light');
+
     robot();
+    lighteningButton();
 });
 
 
