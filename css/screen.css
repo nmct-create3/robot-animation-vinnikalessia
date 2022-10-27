@@ -199,8 +199,6 @@ body {
 }
 
 
-
-
 /*
     Component: Controls
 */
@@ -214,12 +212,40 @@ body {
 .c-controls__button{
   display: flex;
   /* justify-content: center; */
+  padding: 8px;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.200);
 }
+
+.c-controls__button:hover{
+  background-color: rgba(0, 0, 0, 0.300);
+}
+
 
 .c-controls__list{
   display: flex;
   gap: 2rem;
 }
+
+
+.c-play-icon{
+  /* position: absolute; */
+  top: 0;
+  right: 0;
+  width: var(--global-whitespace);
+  height: var(--global-whitespace);
+  fill: var(--global-color-neutral-x-light);
+}
+
+.c-play-icon--play{
+  display: none;
+}
+
+.c-play-icon--pause{
+  display: block;
+}
+
+
 
 
 /*------------------------------------*\
